@@ -5,3 +5,7 @@ spring:
       max-request-size: 500MB
   application:
     name: MONGO-SERVER
+  data:
+    mongodb:
+      uri: mongodb://10.1.0.89:30002/test_jhl
+      field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy

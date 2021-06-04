@@ -1,5 +1,6 @@
 package com.example.mongo.service.impl;
 
+import com.example.mongo.data.MongoData;
 import com.example.mongo.service.MongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -18,6 +19,12 @@ public class MongoServiceImpl implements MongoService {
     @Resource
     private MongoTemplate mongoTemplate;
 
-
-
+    /**
+     * 新增
+     * @param data
+     */
+    @Override
+    public void save(MongoData data) {
+        mongoTemplate.save(data);
+    }
 }
